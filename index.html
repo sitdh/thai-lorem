@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="tipsum">
 <head>
     <meta charset="UTF-8">
-    <title>ไทยลิปซัม</title>
+    <title>{{title}}</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+    <!--
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bower_components/angular-ui/build/angular-ui.min.css">
+    <script src="https://code.angularjs.org/1.4.7/angular-aria.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.7/angular-animate.min.js"></script>
+    -->
+    <script src="https://code.angularjs.org/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc3/angular-material.min.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+    <link rel="stylesheet" href="assets/css/display.css">
+</head>
+<body>
+    <div ng-controller="GoldenMountain">
+        <h2>Thai lipsum</h2>
+        type: {{generateType}} <br />
+        repitation: {{repitation}}
+        <a href="#create" ng-click="generated()">Create</a>
+
+        <pre>{{ dataGenerated }}</pre>
+    </div>
 
     <script src="assets/js/lipsum.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style/display.css">
-</head>
-<body>
 </body>
 </html>
